@@ -7,6 +7,7 @@ body{
 .main-grid{
     display: grid;
     grid-template-columns: 150px 150px 150px 150px;
+    grid-template-rows: 50px 50px 50px;
     gap: 60px;
 }
 
@@ -39,13 +40,122 @@ body{
     height: 100%;
     background: bisque;
     position: relative;
-    animation: mymove 250ms;
+    animation: effect3 250ms;
   }
   
-  @keyframes mymove {
-    0%   {top: 0px; left: 0px; background: bisque;}
-    25%  {top: 0px; left: 2px; background: bisque;}
-    50%  {top: 0px; left: -2px; background: bisque;}
-    75%  {top: 0px; left: 2px; background: bisque;}
-    100% {top: 0px; left: 0px; background: bisque;}
+  @keyframes effect3 {
+    0%   {top: 0px; left: 0px;}
+    25%  {top: 0px; left: 4px;}
+    50%  {top: 0px; left: -4px;}
+    75%  {top: 0px; left: 4px;}
+    100% {top: 0px; left: 0px;}
   }
+
+  /** effekt4 **/
+
+.effekt4:hover {
+    width: 100%;
+    height: 100%;
+    background: bisque;
+    position: relative;
+    animation: effect4 500ms ;
+  }
+  
+  @keyframes effect4 {
+    0%   {transform: rotate(0deg)}
+    25%  {transform: rotate(5deg)}
+    50%  {transform: rotate(10deg)}
+    75%  {transform: rotate(5deg)}
+    100% {transform: rotate(0deg)}
+  }
+
+/** effekt5 **/
+
+.effekt5:hover {
+    width: 100%;
+    height: 100%;
+    background: bisque;
+    position: relative;
+    animation: effect5 250ms;
+  }
+  
+  @keyframes effect5 {
+    0%   {top: 0px; left: 0px; background: bisque;}
+    25%  {top: -5px; left: 0px; background: bisque;}
+    50%  {top: 0px; left: 0px; background: bisque;}
+    75%  {top: 5px; left: 0px; background: bisque;}
+    100% {top: 0px; left: 0px; background: bisque;}
+  }  
+
+  /** effekt6 **/
+
+.effekt6:hover{
+    transform: translate( 5px, 5px);
+}
+
+ /** effekt7 **/
+
+ .effekt7:hover{
+    box-shadow: 0 1.9rem 3.8rem rgba(0, 0, 0, 0.3), 0 1.5rem 1.2rem rgba(0, 0, 0, 0.22);
+    transform: translate( 0px, -5px);
+}
+
+ /** effekt8 **/
+ .grid-item8{
+    border: solid black 1px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: bisque;
+    position: relative;
+    transition: all 250ms ease;
+    animation: effekt8-out 500ms forwards;
+}
+
+ .effekt8:hover{
+   animation: effect8-in 500ms forwards;
+}
+
+@keyframes effect8-in {
+    0%   {transform: translate(0, 0);}
+    50%   {transform: translate(0, 10px);}
+    100%   {transform: translate(0, 10px) rotate(5deg);}
+}
+
+@keyframes effekt8-out {
+    0%   {transform: translate(0, 10px) rotate(5deg);}
+    50%   {transform: translate(0, 10px);}
+    100%   {transform: translate(0, 0);}
+}
+
+/** effekt9 **/
+.grid-item9{
+    border: solid black 1px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: bisque;
+    position: relative;
+    transition: all 250ms ease;
+    animation: effekt9-out 1s forwards;
+}
+
+ .effekt9:hover{
+   animation: effect9-in 1s forwards;
+}
+
+@keyframes effect9-in {
+    0%   {}
+    25%   {border-left: 8px solid green; }
+    50%   {border-top: 8px solid green;}
+    75%   {border-right: 8px solid green;}
+    100%   {border-bottom: 8px solid green;}
+}
+
+@keyframes effekt9-out {
+    0%   {border-bottom: 8px solid green;}
+    25%   {border-left: 8px solid green; }
+    50%   {border-top: 8px solid green;}
+    75%   {border-right: 8px solid green;}
+    100%   {}
+}
