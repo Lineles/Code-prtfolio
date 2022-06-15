@@ -1,0 +1,51 @@
+/**grund layout**/
+
+body{
+    margin: 60px;
+}
+
+.main-grid{
+    display: grid;
+    grid-template-columns: 150px 150px 150px 150px;
+    gap: 60px;
+}
+
+.grid-item{
+    border: solid black 1px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: bisque;
+    position: relative;
+    transition: all 250ms ease;
+}
+
+/** effekte **/
+
+/** effekt1 **/
+.effekt1:hover{
+    box-shadow: inset 0 0 0 5px red  ;
+}
+
+/** effekt2 **/
+.effekt2:hover{
+    border-radius: 20px;
+}
+
+/** effekt3 **/
+
+.effekt3:hover {
+    width: 100%;
+    height: 100%;
+    background: bisque;
+    position: relative;
+    animation: mymove 250ms;
+  }
+  
+  @keyframes mymove {
+    0%   {top: 0px; left: 0px; background: bisque;}
+    25%  {top: 0px; left: 2px; background: bisque;}
+    50%  {top: 0px; left: -2px; background: bisque;}
+    75%  {top: 0px; left: 2px; background: bisque;}
+    100% {top: 0px; left: 0px; background: bisque;}
+  }
